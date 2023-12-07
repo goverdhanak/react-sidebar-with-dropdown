@@ -1,12 +1,12 @@
-import { Avatar, Drawer, List, Stack, Toolbar } from "@mui/material";
-import assets from "../../assets";
+import { Drawer, List, Stack, Toolbar } from "@mui/material";
 import colorConfigs from "../../configs/colorConfigs";
 import sizeConfigs from "../../configs/sizeConfigs";
 import appRoutes from "../../routes/appRoutes";
-import SidebarItem from "./SidebarItem";
+import SidebarItem from "./SidebarItem.jsx";
 import SidebarItemCollapse from "./SidebarItemCollapse";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Sidebar = () => {
+const Sidebar = ({ OpenCloseSide }) => {
   return (
     <Drawer
       variant="permanent"
@@ -18,21 +18,24 @@ const Sidebar = () => {
           boxSizing: "border-box",
           borderRight: "0px",
           backgroundColor: colorConfigs.sidebar.bg,
-          color: colorConfigs.sidebar.color
-        }
+          color: colorConfigs.sidebar.color,
+        },
       }}
     >
-      <List disablePadding>
-        <Toolbar sx={{ marginBottom: "20px" }}>
-          <Stack
-            sx={{ width: "100%" }}
-            direction="row"
-            justifyContent="center"
-          >
-            <Avatar src={assets.images.logo} />
-          </Stack>
+      <List>
+        <Toolbar>
+          <div className="d-flex w-100 justify-content-between">
+            <b>
+              <h5>THIRD EYE</h5>
+            </b>
+            <AiOutlineClose
+              size={25}
+              onClick={OpenCloseSide}
+              cursor="pointer"
+            />
+          </div>
         </Toolbar>
-        {appRoutes.map((route, index) => (
+        {appRoutes.map((route, index) =>
           route.sidebarProps ? (
             route.child ? (
               <SidebarItemCollapse item={route} key={index} />
@@ -40,7 +43,7 @@ const Sidebar = () => {
               <SidebarItem item={route} key={index} />
             )
           ) : null
-        ))}
+        )}
       </List>
     </Drawer>
   );
