@@ -1,5 +1,4 @@
 import React from 'react';
-import "../../style/HomePage.css"
 import bgImg from '../../assets/images/bgImge.png'
 
 

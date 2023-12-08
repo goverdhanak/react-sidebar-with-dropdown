@@ -8,3 +8,23 @@
     flex-wrap: nowrap;
     z-index: -1;
 }
+
+.HomePageTablue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 87vh;
+}
+
+.LoginBtn {
+    border: none;
+    padding: 6px;
+    outline: none;
+    background-color: #f2f0f0;
+    border: 1px solid #c3c1c1;
+}
+
+.LoginBtn:hover {
+    background-color: #e3e0e0;
+}
