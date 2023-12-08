@@ -7,7 +7,6 @@ import SidebarItemCollapse from "./SidebarItemCollapse";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Sidebar = ({ OpenCloseSide }) => {
-  console.log("appRoutes==>", appRoutes)
   return (
     <Drawer
       variant="permanent"
