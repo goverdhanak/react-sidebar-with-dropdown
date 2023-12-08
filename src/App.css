@@ -13,8 +13,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    height: 87vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 90vh;
 }
 
 .LoginBtn {
