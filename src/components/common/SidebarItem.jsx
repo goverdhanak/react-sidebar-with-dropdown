@@ -1,4 +1,4 @@
-import { ListItemButton, ListItemIcon } from "@mui/material";
+import { ListItemButton, ListItemIcon, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import colorConfigs from "../../configs/colorConfigs";
@@ -27,7 +27,9 @@ const SidebarItem = ({ item }) => {
       >
         {item.sidebarProps.icon && item.sidebarProps.icon}
       </ListItemIcon>
-      {item.sidebarProps.displayText}
+      <Typography style={{ fontSize: "12px" }}>
+        {item.sidebarProps.displayText}
+      </Typography>
     </ListItemButton>
   ) : null;
 };

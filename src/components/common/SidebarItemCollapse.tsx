@@ -14,7 +14,6 @@ type Props = {
 
 const SidebarItemCollapse = ({ item }: Props) => {
   const [open, setOpen] = useState(false);
-
   const { appState } = useSelector((state: RootState) => state.appState);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ const SidebarItemCollapse = ({ item }: Props) => {
 
   return (
     item.sidebarProps ? (
-      <>
+      <div>
         <ListItemButton
           onClick={() => setOpen(!open)}
           sx={{
@@ -42,9 +41,8 @@ const SidebarItemCollapse = ({ item }: Props) => {
             {item.sidebarProps.icon && item.sidebarProps.icon}
           </ListItemIcon>
           <ListItemText
-            disableTypography
             primary={
-              <Typography>
+              <Typography style={{ fontSize: "13px" }}>
                 {item.sidebarProps.displayText}
               </Typography>
             }
@@ -64,7 +62,7 @@ const SidebarItemCollapse = ({ item }: Props) => {
             ))}
           </List>
         </Collapse>
-      </>
+      </div>
     ) : null
   );
 };

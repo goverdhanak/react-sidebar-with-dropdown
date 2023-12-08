@@ -7,6 +7,7 @@ import SidebarItemCollapse from "./SidebarItemCollapse";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Sidebar = ({ OpenCloseSide }) => {
+  console.log("appRoutes==>", appRoutes)
   return (
     <Drawer
       variant="permanent"
@@ -15,8 +16,6 @@ const Sidebar = ({ OpenCloseSide }) => {
         flexShrink: 0,
         "& .MuiDrawer-paper": {
           width: sizeConfigs.sidebar.width,
-          boxSizing: "border-box",
-          borderRight: "0px",
           backgroundColor: colorConfigs.sidebar.bg,
           color: colorConfigs.sidebar.color,
         },
