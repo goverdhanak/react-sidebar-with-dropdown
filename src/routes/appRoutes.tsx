@@ -1,124 +1,97 @@
-import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
 import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
-import DefaultPage from "../pages/dashboard/DefaultPage";
-import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import ChangelogPage from "../pages/changelog/ChangelogPage";
-import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
-import SaasPage from "../pages/dashboard/SaasPage";
-import ComponentPageLayout from "../pages/component/ComponentPageLayout";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import AlertPage from "../pages/component/AlertPage";
-import ButtonPage from "../pages/component/ButtonPage";
-import InstallationPage from "../pages/installation/InstallationPage";
-import DocumentationPage from "../pages/documentation/DocumentationPage";
+import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
+import DashboardIndex from "../pages/dashboard/DashboardIndex";
+import DarkCatchmentExansion from "../pages/dashboard/DarkCatchmentExansion";
+import WithinCityExpansion from "../pages/dashboard/WithinCityExpansion";
+import NewCityExpansion from "../pages/dashboard/NewCityExpansion";
 
 const appRoutes: RouteType[] = [
   {
-    path:"/third_eye",
+    path: "/third_eye",
     index: true,
     element: <HomePage />,
     state: "home"
   },
   {
-    path: "/dashboard",
+    path: "/location",
     element: <DashboardPageLayout />,
-    state: "dashboard",
+    state: "location",
     sidebarProps: {
-      displayText: "Dashboard",
+      displayText: "Location",
       icon: <DashboardOutlinedIcon />
     },
     child: [
       {
         index: true,
         element: <DashboardIndex />,
-        state: "dashboard.index"
+        state: "location.index"
       },
       {
-        path: "/dashboard/default",
-        element: <DefaultPage />,
-        state: "dashboard.default",
+        path: "/location/dark/catchment/expansion",
+        element: <DarkCatchmentExansion />,
+        state: "location.dark_catchment_expansion",
         sidebarProps: {
-          displayText: "Default"
+          displayText: "Dark Catchment Expansion"
         },
       },
       {
-        path: "/dashboard/analytics",
-        element: <AnalyticsPage />,
-        state: "dashboard.analytics",
+        path: "/location/within/city/expansion",
+        element: <WithinCityExpansion />,
+        state: "location.whithin_city_expansion",
         sidebarProps: {
-          displayText: "Analytic"
+          displayText: "Within City Expansion"
         }
       },
       {
-        path: "/dashboard/saas",
-        element: <SaasPage />,
-        state: "dashboard.saas",
+        path: "/location/new/city/expansion",
+        element: <NewCityExpansion />,
+        state: "location.new_city_expansion",
         sidebarProps: {
-          displayText: "Saas"
+          displayText: "New City Expansion"
         }
       }
     ]
   },
-  {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "changelog",
-    sidebarProps: {
-      displayText: "Changelog",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  },
-  {
-    path: "/installation",
-    element: <InstallationPage />,
-    state: "installation",
-    sidebarProps: {
-      displayText: "Installation",
-      icon: <FileDownloadOutlinedIcon />
-    }
-  },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "component",
-    sidebarProps: {
-      displayText: "Components",
-      icon: <AppsOutlinedIcon />
-    },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Alert"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Button"
-        }
-      }
-    ]
-  },
-  {
-    path: "/documentation",
-    element: <DocumentationPage />,
-    state: "documentation",
-    sidebarProps: {
-      displayText: "Documentation",
-      icon: <ArticleOutlinedIcon />
-    }
-  },
- 
+
+  // FOR FUTURE REFRENCE
+  // {
+  //   path: "/component",
+  //   element: <ComponentPageLayout />,
+  //   state: "component",
+  //   sidebarProps: {
+  //     displayText: "Components",
+  //     icon: <AppsOutlinedIcon />
+  //   },
+  //   child: [
+  //     {
+  //       path: "/component/alert",
+  //       element: <AlertPage />,
+  //       state: "component.alert",
+  //       sidebarProps: {
+  //         displayText: "Alert"
+  //       },
+  //     },
+  //     {
+  //       path: "/component/button",
+  //       element: <ButtonPage />,
+  //       state: "component.button",
+  //       sidebarProps: {
+  //         displayText: "Button"
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: "/documentation",
+  //   element: <DocumentationPage />,
+  //   state: "documentation",
+  //   sidebarProps: {
+  //     displayText: "Documentation",
+  //     icon: <ArticleOutlinedIcon />
+  //   }
+  // },
 ];
 
 export default appRoutes;

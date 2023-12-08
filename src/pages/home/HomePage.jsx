@@ -1,13 +1,12 @@
 import React from 'react';
 import "../../style/HomePage.css"
+import bgImg from '../../assets/images/bgImge.png'
 
 
 const HomePage = () => {
   return (
     <div>
-      <div className='HomePageTablue'>
-        heloo
-      </div>
+      <img src={bgImg} class="img-fluid" alt="..." />
     </div>
   );
 };
