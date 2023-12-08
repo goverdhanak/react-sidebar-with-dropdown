@@ -19,18 +19,10 @@ import DocumentationPage from "../pages/documentation/DocumentationPage";
 
 const appRoutes: RouteType[] = [
   {
+    path:"/third_eye",
     index: true,
     element: <HomePage />,
     state: "home"
-  },
-  {
-    path: "/installation",
-    element: <InstallationPage />,
-    state: "installation",
-    sidebarProps: {
-      displayText: "Installation",
-      icon: <FileDownloadOutlinedIcon />
-    }
   },
   {
     path: "/dashboard",
@@ -73,6 +65,24 @@ const appRoutes: RouteType[] = [
     ]
   },
   {
+    path: "/changelog",
+    element: <ChangelogPage />,
+    state: "changelog",
+    sidebarProps: {
+      displayText: "Changelog",
+      icon: <FormatListBulletedOutlinedIcon />
+    }
+  },
+  {
+    path: "/installation",
+    element: <InstallationPage />,
+    state: "installation",
+    sidebarProps: {
+      displayText: "Installation",
+      icon: <FileDownloadOutlinedIcon />
+    }
+  },
+  {
     path: "/component",
     element: <ComponentPageLayout />,
     state: "component",
@@ -108,15 +118,7 @@ const appRoutes: RouteType[] = [
       icon: <ArticleOutlinedIcon />
     }
   },
-  {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "changelog",
-    sidebarProps: {
-      displayText: "Changelog",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  }
+ 
 ];
 
 export default appRoutes;
