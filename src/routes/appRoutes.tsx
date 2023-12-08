@@ -1,11 +1,11 @@
 import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
-import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
-import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import DarkCatchmentExansion from "../pages/dashboard/DarkCatchmentExansion";
-import WithinCityExpansion from "../pages/dashboard/WithinCityExpansion";
-import NewCityExpansion from "../pages/dashboard/NewCityExpansion";
+import DashboardPageLayout from "../pages/location/DashboardPageLayout";
+import DashboardIndex from "../pages/location/DashboardIndex";
+import DarkCatchmentExansion from "../pages/location/DarkCatchmentExansion";
+import WithinCityExpansion from "../pages/location/WithinCityExpansion";
+import NewCityExpansion from "../pages/location/NewCityExpansion";
 
 const appRoutes: RouteType[] = [
   {
