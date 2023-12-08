@@ -11,10 +11,9 @@ const MainLayout = () => {
   };
   return (
     <Box>
-      {openSide === true &&
-        <Sidebar OpenCloseSide={OpenCloseSide} />
+      {openSide === true ?
+        <Sidebar OpenCloseSide={OpenCloseSide} /> : <SideBarToggel OpenCloseSide={OpenCloseSide} />
       }
-      <SideBarToggel OpenCloseSide={OpenCloseSide} />
       <div className={openSide === true ? "page_layout" : ""}>
         <Outlet />
       </div>
