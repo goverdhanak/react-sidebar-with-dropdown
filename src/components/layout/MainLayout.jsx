@@ -10,15 +10,14 @@ const MainLayout = () => {
     setOpenSide(!openSide);
   };
   return (
-    <Box sx={openSide === true ? { display: "flex" } : ""}>
-      <Box>
-        {openSide === true ? (
-          <Sidebar OpenCloseSide={OpenCloseSide} />
-        ) : (
-          <SideBarToggel OpenCloseSide={OpenCloseSide} />
-        )}
-      </Box>
-      <Outlet />
+    <Box>
+      {openSide === true &&
+        <Sidebar OpenCloseSide={OpenCloseSide} />
+      }
+      <SideBarToggel OpenCloseSide={OpenCloseSide} />
+      <div className={openSide === true ? "page_layout" : ""}>
+        <Outlet />
+      </div>
     </Box>
   );
 };
