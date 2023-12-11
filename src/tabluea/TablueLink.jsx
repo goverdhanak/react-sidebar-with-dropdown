@@ -1,0 +1,1 @@
+export const tablueLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Tanishq/CatchmentAnalysis"

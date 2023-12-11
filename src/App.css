@@ -18,14 +18,11 @@
     height: 90vh;
 }
 
-.LoginBtn {
-    border: none;
-    padding: 6px;
-    outline: none;
-    background-color: #f2f0f0;
-    border: 1px solid #c3c1c1;
+
+.home_navigate {
+    cursor: pointer;
 }
 
-.LoginBtn:hover {
-    background-color: #e3e0e0;
+.home_navigate:hover {
+    color: #d6d3d3;
 }

@@ -5,8 +5,10 @@ import appRoutes from "../../routes/appRoutes";
 import SidebarItem from "./SidebarItem.jsx";
 import SidebarItemCollapse from "./SidebarItemCollapse";
 import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ OpenCloseSide }) => {
+  const navigate = useNavigate()
   return (
     <Drawer
       variant="permanent"
@@ -23,7 +25,7 @@ const Sidebar = ({ OpenCloseSide }) => {
       <List>
         <Toolbar>
           <div className="d-flex w-100 justify-content-between">
-            <b>
+            <b onClick={() => navigate('/third_eye')} className="home_navigate">
               <h5>THIRD EYE</h5>
             </b>
             <AiOutlineClose
