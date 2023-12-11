@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineAlignLeft } from "react-icons/ai";
-import "../../style/ToggleSideBaar.css"
 import { IoColorFilter, IoCompass, IoLocation } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideBarToggel = ({ OpenCloseSide }) => {
-  const navigate = useNavigate()
+  const location = useLocation();
 
+  useEffect(() => { }, [location]);
   return (
     <div style={{
       height: "100vh",
@@ -19,21 +19,25 @@ const SideBarToggel = ({ OpenCloseSide }) => {
           <AiOutlineAlignLeft onClick={OpenCloseSide} size={30} cursor="pointer" color="#fff" />
         </div>
         <br />
-        <div>
+        <Link to="/location/dark/catchment/expansion">
           <IoColorFilter size={25}
-            onClick={() => navigate('/location/dark/catchment/expansion')}
-            cursor="pointer" color="#fff" />
-        </div>
+            className={location.pathname === "/location/dark/catchment/expansion" ? "side_icons_style" : "side_icons_style1"}
+          />
+        </Link>
         <div className="my-4">
-          <IoLocation size={25}
-            onClick={() => navigate('/location/within/city/penetration')}
-            cursor="pointer" color="#fff" />
+          <Link to="/location/within/city/penetration"
+          >
+            <IoLocation size={25}
+              className={location.pathname === "/location/within/city/penetration" ? "side_icons_style" : "side_icons_style1"}
+            />
+          </Link>
         </div>
-        <div>
+        <Link to="/location/new/city/expansion"
+        >
           <IoCompass size={25}
-            onClick={() => navigate('/location/new/city/expansion')}
-            cursor="pointer" color="#fff" />
-        </div>
+            className={location.pathname === "/location/new/city/expansion" ? "side_icons_style" : "side_icons_style1"}
+          />
+        </Link>
       </div>
     </div >
   );
