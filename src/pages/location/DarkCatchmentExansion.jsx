@@ -7,9 +7,7 @@ const DarkCatchmentExansion = () => {
 
   return (
     <div className="HomePageTablue">
-      <tableau-viz id="tableauViz"
-        src={tablueLink}
-      />
+      <tableau-viz src={tablueLink} />
     </div>
   );
 };
