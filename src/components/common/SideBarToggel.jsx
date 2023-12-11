@@ -21,21 +21,21 @@ const SideBarToggel = ({ OpenCloseSide }) => {
         <br />
         <Link to="/location/dark/catchment/expansion">
           <IoColorFilter size={25}
-            className={location.pathname === "/location/dark/catchment/expansion" ? "side_icons_style" : "side_icons_style1"}
+            className={location.pathname === "/location/dark/catchment/expansion" ? "active" : "side_icons_style"}
           />
         </Link>
         <div className="my-4">
           <Link to="/location/within/city/penetration"
           >
             <IoLocation size={25}
-              className={location.pathname === "/location/within/city/penetration" ? "side_icons_style" : "side_icons_style1"}
+              className={location.pathname === "/location/within/city/penetration" ? "active" : "side_icons_style"}
             />
           </Link>
         </div>
         <Link to="/location/new/city/expansion"
         >
           <IoCompass size={25}
-            className={location.pathname === "/location/new/city/expansion" ? "side_icons_style" : "side_icons_style1"}
+            className={location.pathname === "/location/new/city/expansion" ? "active" : "side_icons_style"}
           />
         </Link>
       </div>
