@@ -6,6 +6,8 @@ import DashboardIndex from "../pages/location/DashboardIndex";
 import DarkCatchmentExansion from "../pages/location/DarkCatchmentExansion";
 import WithinCityExpansion from "../pages/location/WithinCityExpansion";
 import NewCityExpansion from "../pages/location/NewCityExpansion";
+import { IoColorFilter, IoCompass, IoLocation } from "react-icons/io5";
+
 
 const appRoutes: RouteType[] = [
   {
@@ -33,15 +35,17 @@ const appRoutes: RouteType[] = [
         element: <DarkCatchmentExansion />,
         state: "location.dark_catchment_expansion",
         sidebarProps: {
-          displayText: "Dark Catchment Expansion"
+          displayText: "Dark Catchment Expansion",
+          icon: <IoColorFilter size={20} />
         },
       },
       {
-        path: "/location/within/city/expansion",
+        path: "/location/within/city/penetration",
         element: <WithinCityExpansion />,
         state: "location.whithin_city_expansion",
         sidebarProps: {
-          displayText: "Within City Expansion"
+          displayText: "Within City Penetration",
+          icon: <IoLocation size={20} />
         }
       },
       {
@@ -49,7 +53,8 @@ const appRoutes: RouteType[] = [
         element: <NewCityExpansion />,
         state: "location.new_city_expansion",
         sidebarProps: {
-          displayText: "New City Expansion"
+          displayText: "New City Expansion",
+          icon: <IoCompass size={20} />
         }
       }
     ]

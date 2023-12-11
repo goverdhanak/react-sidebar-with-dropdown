@@ -9,6 +9,15 @@
     z-index: -1;
 }
 
+.page_layout_toggle {
+    overflow-x: hidden;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: -1;
+}
+
 .HomePageTablue {
     display: flex;
     justify-content: center;
