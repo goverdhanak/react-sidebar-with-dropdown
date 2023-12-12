@@ -1,3 +1,4 @@
+import Tippy from "@tippyjs/react";
 import React, { useEffect } from "react";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import { IoColorFilter, IoCompass, IoLocation } from "react-icons/io5";
@@ -19,25 +20,31 @@ const SideBarToggel = ({ OpenCloseSide }) => {
           <AiOutlineAlignLeft onClick={OpenCloseSide} size={30} cursor="pointer" color="#fff" />
         </div>
         <br />
-        <Link to="/location/dark/catchment/expansion">
-          <IoColorFilter size={25}
-            className={location.pathname === "/location/dark/catchment/expansion" ? "active" : "side_icons_style"}
-          />
-        </Link>
-        <div className="my-4">
-          <Link to="/location/within/city/penetration"
-          >
-            <IoLocation size={25}
-              className={location.pathname === "/location/within/city/penetration" ? "active" : "side_icons_style"}
+        <Tippy content={<span className="text-blue bg-light p-3" >Dark Catchment</span>} placement="right">
+          <Link to="/location/dark/catchment/expansion">
+            <IoColorFilter size={25}
+              className={location.pathname === "/location/dark/catchment/expansion" ? "active" : "side_icons_style"}
             />
           </Link>
+        </Tippy>
+        <div className="my-4">
+          <Tippy content={<span className="text-blue bg-light p-3" >Within City</span>} placement="right">
+            <Link to="/location/within/city/penetration"
+            >
+              <IoLocation size={25}
+                className={location.pathname === "/location/within/city/penetration" ? "active" : "side_icons_style"}
+              />
+            </Link>
+          </Tippy>
         </div>
-        <Link to="/location/new/city/expansion"
-        >
-          <IoCompass size={25}
-            className={location.pathname === "/location/new/city/expansion" ? "active" : "side_icons_style"}
-          />
-        </Link>
+        <Tippy content={<span className="text-blue bg-light p-3" >New City</span>} placement="right">
+          <Link to="/location/new/city/expansion"
+          >
+            <IoCompass size={25}
+              className={location.pathname === "/location/new/city/expansion" ? "active" : "side_icons_style"}
+            />
+          </Link>
+        </Tippy>
       </div>
     </div >
   );
