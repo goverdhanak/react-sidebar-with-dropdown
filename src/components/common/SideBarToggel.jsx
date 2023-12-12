@@ -20,7 +20,7 @@ const SideBarToggel = ({ OpenCloseSide }) => {
           <AiOutlineAlignLeft onClick={OpenCloseSide} size={30} cursor="pointer" color="#fff" />
         </div>
         <br />
-        <Tippy content={<span className="text-blue bg-light p-3" >Dark Catchment</span>} placement="right">
+        <Tippy content={<span className="hover_name">Dark Catchment</span>} placement="right">
           <Link to="/location/dark/catchment/expansion">
             <IoColorFilter size={25}
               className={location.pathname === "/location/dark/catchment/expansion" ? "active" : "side_icons_style"}
@@ -28,7 +28,7 @@ const SideBarToggel = ({ OpenCloseSide }) => {
           </Link>
         </Tippy>
         <div className="my-4">
-          <Tippy content={<span className="text-blue bg-light p-3" >Within City</span>} placement="right">
+          <Tippy content={<span className="hover_name" >Within City</span>} placement="right">
             <Link to="/location/within/city/penetration"
             >
               <IoLocation size={25}
@@ -37,7 +37,7 @@ const SideBarToggel = ({ OpenCloseSide }) => {
             </Link>
           </Tippy>
         </div>
-        <Tippy content={<span className="text-blue bg-light p-3" >New City</span>} placement="right">
+        <Tippy content={<span className="hover_name" >New City</span>} placement="right">
           <Link to="/location/new/city/expansion"
           >
             <IoCompass size={25}
