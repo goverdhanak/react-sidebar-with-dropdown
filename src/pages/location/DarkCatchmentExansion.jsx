@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { tablueLink } from "../../tabluea/TablueLink";
+import { darkcatchLink } from "../../tabluea/TablueLink";
 import Loader from "../../components/common/Loder";
 
 
@@ -12,8 +12,8 @@ const DarkCatchmentExansion = () => {
 
   return (
     <div className="HomePageTablue">
-      {loading ? <Loader /> : <tableau-viz id="tableauViz"
-        src={tablueLink}
+      {loading ? <Loader /> : <tableau-viz id="tableauViz"  height="100vh" width="90vw"
+        src={darkcatchLink}
       />}
     </div>
   );

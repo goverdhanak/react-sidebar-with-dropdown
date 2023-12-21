@@ -15,7 +15,7 @@ const SideBarToggel = ({ OpenCloseSide }) => {
       position: "fixed",
       backgroundColor: "#233044",
     }}>
-      <div style={{ paddingTop: "13px", padding: "13px" }}>
+      <div style={{ paddingTop: "13px", padding: "13px"}}>
         <div className="mb-2">
           <AiOutlineAlignLeft onClick={OpenCloseSide} size={30} cursor="pointer" color="#fff" />
         </div>
