@@ -20,6 +20,7 @@ const Sidebar = ({ OpenCloseSide }) => {
           width: sizeConfigs.sidebar.width,
           backgroundColor: colorConfigs.sidebar.bg,
           color: colorConfigs.sidebar.color,
+          boxShadow:colorConfigs.sidebar.boxShadow
         },
       }}
     >
