@@ -1,8 +1,8 @@
 import Tippy from "@tippyjs/react";
 import React, { useEffect } from "react";
-import { AiOutlineAlignLeft } from "react-icons/ai";
 import { IoColorFilter, IoCompass, IoLocation } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
+import toggle_icon from "../../assets/toggle_icon.png"
 
 const SideBarToggel = ({ OpenCloseSide }) => {
   const location = useLocation();
@@ -17,7 +17,7 @@ const SideBarToggel = ({ OpenCloseSide }) => {
     }}>
       <div style={{ paddingTop: "13px", padding: "13px"}}>
         <div className="mb-2">
-          <AiOutlineAlignLeft onClick={OpenCloseSide} size={30} cursor="pointer" color="#fff" />
+          <img src={toggle_icon} onClick={OpenCloseSide} height={30} width={30} style = {{cursor:"pointer"}} />
         </div>
         <br />
         <Tippy content={<span className="hover_name">Dark Catchment</span>} placement="right">

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/third_eye/static/css/main.ffb29554.css",
+    "main.js": "/third_eye/static/js/main.77928ebc.js",
+    "static/js/787.f7315d30.chunk.js": "/third_eye/static/js/787.f7315d30.chunk.js",
+    "static/media/bgImge.png": "/third_eye/static/media/bgImge.02670987a4c8c82aaecb.png",
+    "static/media/toggle_icon.png": "/third_eye/static/media/toggle_icon.18b0603ab63c55212708.png",
+    "index.html": "/third_eye/index.html",
+    "main.ffb29554.css.map": "/third_eye/static/css/main.ffb29554.css.map",
+    "main.77928ebc.js.map": "/third_eye/static/js/main.77928ebc.js.map",
+    "787.f7315d30.chunk.js.map": "/third_eye/static/js/787.f7315d30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffb29554.css",
+    "static/js/main.77928ebc.js"
+  ]
+}

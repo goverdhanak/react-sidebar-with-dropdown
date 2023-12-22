@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { peneLink } from "../../tabluea/TablueLink";
+import { tep_peneLink } from "../../tabluea/TablueLink";
 import Loader from "../../components/common/Loder";
 
 const WithinCityExpansion = () => {
@@ -10,7 +10,7 @@ const WithinCityExpansion = () => {
   return (
     <div className="HomePageTablue">
       {loading ? <Loader /> : <tableau-viz id="tableauViz" height="100vh" width="90vw"
-        src={peneLink}
+        src={tep_peneLink}
       />}
     </div>
   )
