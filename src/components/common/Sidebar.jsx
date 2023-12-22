@@ -6,6 +6,7 @@ import SidebarItem from "./SidebarItem.jsx";
 import SidebarItemCollapse from "./SidebarItemCollapse";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { homelink } from "../../tabluea/TablueLink";
 
 
 const Sidebar = ({ OpenCloseSide }) => {
@@ -27,7 +28,7 @@ const Sidebar = ({ OpenCloseSide }) => {
       <List>
         <Toolbar>
           <div className="d-flex w-100 justify-content-between">
-            <b onClick={() => navigate('/third_eye')} className="home_navigate">
+            <b onClick={() => navigate(homelink)} className="home_navigate">
               <h5>THIRD EYE</h5>
             </b>
             <AiOutlineClose

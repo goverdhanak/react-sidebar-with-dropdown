@@ -4,7 +4,7 @@ import Sidebar from "../common/Sidebar";
 import SideBarToggel from "../common/SideBarToggel";
 
 const MainLayout = () => {
-  const [openSide, setOpenSide] = useState(true);
+  const [openSide, setOpenSide] = useState(false);
   const OpenCloseSide = () => {
     setOpenSide(!openSide);
   };

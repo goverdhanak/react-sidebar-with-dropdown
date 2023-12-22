@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { tep_newcityLink } from "../../tabluea/TablueLink";
 import Loader from "../../components/common/Loder";
+import { newcityLink } from "../../tabluea/TablueLink";
 
 
 const NewCityExpansion = () => {
@@ -8,10 +8,12 @@ const NewCityExpansion = () => {
   useEffect(() => {
     setLoading(false)
   }, [loading])
+  // const functioncall = chnl('wot')
+  // console.log("functioncall==>",functioncall)
   return (
     <div className="HomePageTablue">
       {loading ? <Loader /> : <tableau-viz id="tableauViz" height="100vh" width="90vw"
-        src={tep_newcityLink}
+        src={newcityLink}
       />}
     </div>
   )

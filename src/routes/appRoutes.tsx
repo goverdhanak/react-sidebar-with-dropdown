@@ -7,11 +7,12 @@ import DarkCatchmentExansion from "../pages/location/DarkCatchmentExansion";
 import WithinCityExpansion from "../pages/location/WithinCityExpansion";
 import NewCityExpansion from "../pages/location/NewCityExpansion";
 import { IoColorFilter, IoCompass, IoLocation } from "react-icons/io5";
+import { homelink } from "../tabluea/TablueLink";
 
 
 const appRoutes: RouteType[] = [
   {
-    path: "/third_eye",
+    path: homelink,
     index: true,
     element: <HomePage />,
     state: "home"

@@ -1,15 +1,57 @@
-export const tan_darkcatchLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Tanishq/CatchmentAnalysis"
-export const tan_peneLink = 'https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Tanishq/NewCityExpansion'
-export const tan_newcityLink = 'https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Tanishq/NewStoreLocation'
+const tan_darkcatchLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Tanishq/CatchmentAnalysis";
+const tan_newcityLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Tanishq/NewCityExpansion";
+const tan_peneLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Tanishq/NewStoreLocation";
 
-export const all_darkcatchLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_AllChannel/CatchmentAnalysis"
-export const all_newcityLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_AllChannel/NewStoreLocation"
-export const all_peneLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_AllChannel/NewCityExpansion"
+const all_darkcatchLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_AllChannel/CatchmentAnalysis";
+const all_peneLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_AllChannel/NewStoreLocation";
+const all_newcityLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_AllChannel/NewCityExpansion";
 
-export const wot_darkcatchLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Watches/CatchmentAnalysis"
-export const wot_newcityLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Watches/NewStoreLocation"
-export const wot_peneLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Watches/NewCityExpansion"
+const wot_darkcatchLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Watches/CatchmentAnalysis";
+const wot_peneLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Watches/NewStoreLocation";
+const wot_newcityLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Watches/NewCityExpansion";
 
-export const tep_darkcatchLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Eyecare/CatchmentAnalysis"
-export const tep_newcityLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Eyecare/NewStoreLocation"
-export const tep_peneLink = "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Eyecare/NewCityExpansion"
+const tep_darkcatchLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_DarkCatchment_Eyecare/CatchmentAnalysis";
+const tep_peneLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Expansion_Eyecare/NewStoreLocation";
+const tep_newcityLink =
+  "https://powerme.titan.in/t/Analytic_Team/views/ThirdEye_Penetration_Eyecare/NewCityExpansion";
+
+const channel = "all";
+
+export let darkcatchlink;
+export let newcityLink;
+export let penelink;
+export let homepagelink;
+export let homelink;
+
+if (channel === "all") {
+  darkcatchlink = all_darkcatchLink;
+  newcityLink = all_newcityLink;
+  penelink = all_peneLink;
+  homelink = "/Thirdeye_Allchannel";
+} else if (channel === "tan") {
+  darkcatchlink = tan_darkcatchLink;
+  newcityLink = tan_newcityLink;
+  penelink = tan_peneLink;
+  homelink = "/Thirdeye_Tanishq";
+} else if (channel === "wot") {
+  darkcatchlink = wot_darkcatchLink;
+  newcityLink = wot_newcityLink;
+  penelink = wot_peneLink;
+  homelink = "/Thirdeye_Watches";
+} else {
+  darkcatchlink = tep_darkcatchLink;
+  newcityLink = tep_newcityLink;
+  penelink = tep_peneLink;
+  homelink = "/Thirdeye_Tep";
+}
